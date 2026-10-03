@@ -1,0 +1,16 @@
+{
+  "project": "UNAEP AI Trust Platform",
+  "export_type": "public-sanitized-reference-implementation",
+  "excluded": [
+    "secrets",
+    "API keys",
+    "tenant IDs",
+    "subscription IDs",
+    "runtime evidence containing potentially sensitive data",
+    "Python bytecode/cache files"
+  ],
+  "deferred_platform_replicas": [
+    "Google ADK / Vertex AI",
+    "AWS Bedrock / AgentCore"
+  ]
+}
