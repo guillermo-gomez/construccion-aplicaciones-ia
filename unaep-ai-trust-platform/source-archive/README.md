@@ -4,14 +4,16 @@ The complete sanitized UNAEP V3 working tree is stored here as Base64 text chunk
 
 ## Contents
 
-- `chunk_01.b64` … `chunk_11.b64`
+- `chunk_01.b64` … `chunk_08.b64`
 - `restore.ps1`
 
-The restored ZIP SHA-256 must be:
+The eight chunks are ordered pieces of one Base64 stream. The reconstructed ZIP SHA-256 must be:
 
 ```text
 01f7157523708f4aa76d861892ae654f4acef27b1260b6740fe11ac4a612c19a
 ```
+
+The eight-chunk layout was locally reconstructed and hash-verified before this branch was prepared.
 
 ## Restore on Windows PowerShell
 
@@ -28,6 +30,12 @@ unaep-ai-trust-platform-source.zip
 ```
 
 and validates its SHA-256 before reporting success.
+
+Expected marker:
+
+```text
+UNAEP_SOURCE_ARCHIVE_OK
+```
 
 ## Security
 
