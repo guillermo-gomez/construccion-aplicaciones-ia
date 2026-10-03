@@ -4,8 +4,8 @@ $ExpectedSha256 = "01f7157523708f4aa76d861892ae654f4acef27b1260b6740fe11ac4a612c
 $OutputZip = Join-Path $PSScriptRoot "unaep-ai-trust-platform-source.zip"
 
 $chunks = Get-ChildItem -Path $PSScriptRoot -Filter "chunk_*.b64" | Sort-Object Name
-if ($chunks.Count -ne 11) {
-    throw "Expected 11 Base64 chunks; found $($chunks.Count)."
+if ($chunks.Count -ne 8) {
+    throw "Expected 8 Base64 chunks; found $($chunks.Count)."
 }
 
 $base64 = ($chunks | ForEach-Object { Get-Content $_.FullName -Raw }) -join ""
